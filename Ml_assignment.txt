@@ -1,0 +1,179 @@
+﻿1. What is a parameter?
+A parameter is a value inside a machine learning model that gets learned from data during training. It defines how the model maps input features to output predictions.
+Example: In a linear regression model, the slope (weight) and intercept (bias) are parameters the model adjusts to fit the training data.
+________________
+
+
+2. What is correlation?
+Correlation measures how two variables move together. If one variable changes and another tends to change in a certain pattern, we call that a correlation. Positive correlation means both increase together; negative means one increases while the other decreases.
+________________
+
+
+3. What does negative correlation mean?
+Negative correlation means as one variable goes up, the other goes down.
+Example: As rainfall increases, the demand for air conditioners often decreases — that’s negative correlation.
+________________
+
+
+4. Define Machine Learning & its main components
+Machine Learning is the branch of artificial intelligence where computers learn patterns from data and make decisions or predictions without being explicitly programmed for every scenario.
+Main components:
+1. Data: Raw information used for training
+
+2. Model: The mathematical structure that learns from data
+
+3. Loss function: Measures how far predictions are from actual answers
+
+4. Optimizer: Adjusts the model parameters to reduce loss
+
+5. Prediction step: Uses trained model to make predictions
+
+This foundation is critical before moving into deeper AI topics like Deep Learning and Generative AI, which your course covers later.
+________________
+
+
+5. How does loss value indicate model performance?
+The loss value quantifies how wrong a model’s predictions are:
+   * High loss → Model predictions are far from actual values → Poor performance
+
+   * Low loss → Predictions closely match actual values → Good performance
+
+In training, the optimizer tries to minimize the loss function so the model gets more accurate over time.
+________________
+
+
+6. What are continuous and categorical variables?
+      * Continuous variables: Numeric values that can take any range of numbers (e.g., age, temperature, salary).
+
+      * Categorical variables: Discrete labels or groups (e.g., country, product type, color).
+
+In your course, handling these correctly is essential before training ML models.
+________________
+
+
+7. How do we handle categorical variables in ML?
+Categorical data must be converted into numerical format because algorithms work with numbers. Typical methods:
+✔ One-Hot Encoding – Create binary columns per category
+✔ Label Encoding – Assign integers to categories
+✔ Ordinal Encoding – For categories with natural order
+________________
+
+
+8. What do you mean by training and testing a dataset?
+         * Training set: The portion of data used to teach the model patterns
+
+         * Testing set: A separate portion used to evaluate how well the trained model predicts new data
+
+This split ensures the model generalizes well and doesn’t just memorize the training data.
+________________
+
+
+9. What is sklearn.preprocessing?
+It’s a Python module in Scikit-Learn that provides tools for:
+✔ Scaling features (StandardScaler, MinMaxScaler)
+✔ Encoding categorical data
+✔ Handling missing values
+✔ Normalizing data
+These preprocessing steps prepare data before training ML models.
+________________
+
+
+10. What is a test set?
+A test set is the hold-out subset of data that’s never seen by the model during training. It’s used to objectively measure how well the model will perform on real, unseen data.
+________________
+
+
+11. How do we split data for training and testing in Python?
+In Scikit-Learn, we use train_test_split:
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+
+
+This splits the data randomly into training and testing subsets.
+________________
+
+
+12. How do you approach a machine learning problem?
+A practical workflow looks like this:
+            1. Understand the problem & data
+
+            2. Collect and clean data
+
+            3. Explore data (EDA)
+
+            4. Preprocess & encode features
+
+            5. Select and train model
+
+            6. Evaluate model performance
+
+            7. Tune & improve model
+
+            8. Deploy model or present results
+
+This full lifecycle is exactly what PW Skills aims to teach as you progress into advanced topics like ML, Deep Learning, and Generative AI.
+________________
+
+
+13. Why is EDA important before modeling?
+Exploratory Data Analysis (EDA) helps you understand patterns, spot outliers, test assumptions, and decide how to best preprocess or feature-engineer the data. Skipping EDA often leads to wrong model assumptions and poor performance.
+________________
+
+
+14. What is causation vs correlation?
+               * Correlation: Two variables move together (but one does not necessarily cause the other).
+
+               * Causation: Change in one variable directly causes change in another.
+
+Correlation does not imply causation — a key concept in data science.
+________________
+
+
+15. What is an optimizer? What are its types?
+An optimizer adjusts model parameters to reduce the loss. Common optimizers include:
+✔ Gradient Descent
+ ✔ Stochastic Gradient Descent (SGD)
+ ✔ Adam
+ ✔ RMSprop
+These are especially important when training Deep Learning models.
+________________
+
+
+16. What is sklearn.linear_model?
+It’s a Scikit-Learn module that provides linear algorithms such as:
+✔ Linear Regression
+✔ Logistic Regression
+These are core models in classical machine learning before you move to deep learning.
+________________
+
+
+17. What does model.fit() do?
+.fit() trains the model by finding the best values of parameters from the training data.
+________________
+
+
+18. What does model.predict() do?
+.predict() uses the trained model to generate predictions on new or testing data.
+________________
+
+
+19. What is feature scaling?
+Feature scaling brings all numeric values to a similar range so one feature doesn’t dominate others. Common methods:
+✔ StandardScaler — mean = 0, std = 1
+✔ MinMaxScaler — values between 0 and 1
+________________
+
+
+20. How do we perform scaling in Python?
+Using Scikit-Learn:
+from sklearn.preprocessing import StandardScaler
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
+
+________________
+
+
+21. Explain data encoding.
+Data encoding converts text or categories into numbers so machine learning models can use them. Methods include one-hot encoding, label encoding, and binary encoding.
+________________
